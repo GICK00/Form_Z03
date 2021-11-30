@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Form_Z03_2
+namespace Form_Z03_3
 {
     public partial class Form1 : Form
     {
@@ -13,6 +13,7 @@ namespace Form_Z03_2
         private void buttonResult_Click(object sender, EventArgs e)
         {
             textBoxResult.Text = "";
+            textBoxResult1.Text = "";
 
             try
             {
@@ -24,10 +25,20 @@ namespace Form_Z03_2
                 {
                     if (h > 0)
                     {
-                        while (a <= b)
+                        double x = a;
+                        while (x <= b)
                         {
-                            f(a);
-                            a = a + h;
+                            f(x);
+                            x = x + h;
+                        }
+
+                        x = a;
+                        double y;
+                        while (x <= b)
+                        {
+                            f(x, out y);
+                            textBoxResult1.Text = textBoxResult1.Text + "x = " + Math.Round(x, 3) + " y = " + Math.Round(y, 3) + "\r\n";
+                            x = x + h;
                         }
                     }
                     else
@@ -55,10 +66,21 @@ namespace Form_Z03_2
             else if (x == 1)
                 textBoxResult.Text = textBoxResult.Text + "x = " + Math.Round(x, 3) + " y = " + Math.Round(y = 0, 3) + "\r\n";
         }
+        static void f(double x, out double y)
+        {
+            y = 1;
+            if (x < 1)
+                y = ((x * x) - 1) * ((x * x) - 1);
+            else if (x > 1)
+                y = 1 / (1 + (x * x));
+            else if (x == 1)
+                y = 0;
+        }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxResult.Text = "";
+            textBoxResult1.Text = "";
         }
     }
 }

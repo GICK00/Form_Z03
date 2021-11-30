@@ -29,8 +29,15 @@ namespace Form_Z03
 
         private void buttonExample_Click(object sender, EventArgs e)
         {
-            int n = Convert.ToInt32(textBoxN.Text);
-            Example(n);
+            try
+            {
+                int n = Convert.ToInt32(textBoxN.Text);
+                Example(n);
+            }
+            catch (Exception)
+            {
+                textBoxExample.Text = "Неккоректный ввод данных!";
+            }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -51,7 +58,7 @@ namespace Form_Z03
             {
                 for (int i = 0; i < n + 1; i++) // Бесполезная демонстрация
                 {
-                    switch (i.ToString().Length)
+                    switch (i.ToString().Length) // Форматирование что бы было красиво 
                     {
                         case 1:
                             textBoxExample.Text = textBoxExample.Text + "i = " + i + ",     f(i) = " + f(i) + "\r\n";
