@@ -83,17 +83,17 @@ namespace Form_Z03
             // textBoxExample
             // 
             this.textBoxExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxExample.Location = new System.Drawing.Point(321, 57);
+            this.textBoxExample.Location = new System.Drawing.Point(309, 57);
             this.textBoxExample.Multiline = true;
             this.textBoxExample.Name = "textBoxExample";
             this.textBoxExample.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxExample.Size = new System.Drawing.Size(151, 209);
+            this.textBoxExample.Size = new System.Drawing.Size(163, 209);
             this.textBoxExample.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(352, 28);
+            this.label3.Location = new System.Drawing.Point(347, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 26);
             this.label3.TabIndex = 5;

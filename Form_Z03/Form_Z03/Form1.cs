@@ -54,27 +54,11 @@ namespace Form_Z03
 
         private void Example(int n)
         {
-            if (n < 999)
+            for (int i = 0; i < n + 1; i++) // Бесполезная демонстрация
             {
-                for (int i = 0; i < n + 1; i++) // Бесполезная демонстрация
-                {
-                    switch (i.ToString().Length) // Форматирование что бы было красиво 
-                    {
-                        case 1:
-                            textBoxExample.Text = textBoxExample.Text + "i = " + i + ",     f(i) = " + f(i) + "\r\n";
-                            break;
-                        case 2:
-                            textBoxExample.Text = textBoxExample.Text + "i = " + i + ",   f(i) = " + f(i) + "\r\n";
-                            break;
-                        case 3:
-                            textBoxExample.Text = textBoxExample.Text + "i = " + i + ", f(i) = " + f(i) + "\r\n";
-                            break;
-                    }
-                }
-            } 
-            else
-            {
-                textBoxResult.Text = "Приложение не может обработать число больше 999, не прописанное форматирование в коносле.";
+
+                textBoxExample.Text = textBoxExample.Text + "i = " + String.Format("{0,4}", i) + ", f(i) = " + String.Format("{0,4}", f(i)) + "\r\n";
+
             }
         }
     }
