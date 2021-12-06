@@ -45,6 +45,7 @@ namespace Form_Z03_2
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::Form_Z03_2.Properties.Resources.Primer;
             this.pictureBox1.ImageLocation = "C:\\Users\\Dmitryi Gick\\source\\repos\\Form_Z03_2\\Primer.png";
             this.pictureBox1.Location = new System.Drawing.Point(22, 154);
             this.pictureBox1.Name = "pictureBox1";
@@ -180,4 +181,3 @@ namespace Form_Z03_2
         private System.Windows.Forms.Button buttonClear;
     }
 }
-
