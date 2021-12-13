@@ -62,7 +62,7 @@ namespace Form_Z03_3
             if (x < 1)
                 textBoxResult.Text = textBoxResult.Text + "x = " + Math.Round(x, 3) + " y = " + Math.Round(y = ((x * x) - 1) * ((x * x) - 1), 3) + "\r\n";
             else if (x > 1)
-                textBoxResult.Text = textBoxResult.Text + "x = " + Math.Round(x, 3) + " y = " + Math.Round(y = 1 / (1 + (x * x)), 3) + "\r\n";
+                textBoxResult.Text = textBoxResult.Text + "x = " + Math.Round(x, 3) + " y = " + Math.Round(y = 1 / ((1 + x) * (1 + x)), 3) + "\r\n";
             else if (x == 1)
                 textBoxResult.Text = textBoxResult.Text + "x = " + Math.Round(x, 3) + " y = " + Math.Round(y = 0, 3) + "\r\n";
         }
@@ -72,7 +72,7 @@ namespace Form_Z03_3
             if (x < 1)
                 y = ((x * x) - 1) * ((x * x) - 1);
             else if (x > 1)
-                y = 1 / (1 + (x * x));
+                y = 1 / ((1 + x) * (1 + x));
             else if (x == 1)
                 y = 0;
         }
